@@ -6,7 +6,7 @@
 <img src="/screenshot/meituan.gif"/>
 
 ### 我的效果图
-<img src="/screenshot/me.gif"/>
+<img src="/screenshot/me.gif" style="width:30%;"/>
 
 ### 使用
 
@@ -15,21 +15,24 @@
 ###### 2.实现onBindView，对itemView设置数据
 ###### 例如
 ```
-RVAdapter<MenuItemEntity> adapter = new RVAdapter<MenuItemEntity>(getContext(),
-                mList, pageSize, spanCount) {
-            @Override
-            protected int getLayoutId() {
-                return R.layout.dot_view_pager_item;
-            }
+public class MyViewPagerAdapter extends RVAdapter<MenuItemEntity> {
+    public MyViewPagerAdapter(Context mContext, List<MenuItemEntity> dataList, int pageSize, int spanCount) {
+        super(mContext, dataList, pageSize, spanCount);
+    }
 
-            @Override
-            protected void onBindView(RecyclerViewHolder holder, int position, MenuItemEntity data) {
-                TextView tv = holder.getView(R.id.tv);
-                tv.setText(data.getTitle());
-                tv.setCompoundDrawablesWithIntrinsicBounds(0, data.getResId(), 0, 0);
+    @Override
+    protected int getLayoutId() {
+        return R.layout.dot_view_pager_item;
+    }
 
-            }
-};
+    @Override
+    protected void onBindView(RecyclerViewHolder holder, int position, MenuItemEntity data) {
+        TextView tv = holder.getView(R.id.tv);
+        tv.setText(data.getTitle());
+        tv.setCompoundDrawablesWithIntrinsicBounds(0, data.getResId(), 0, 0);
+
+    }
+}
  ```
 
 #### 设置Item事件监听
