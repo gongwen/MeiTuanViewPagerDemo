@@ -1,18 +1,18 @@
 # MeiTuanViewPagerLibrary
-模仿美团首页切换效果
+快速实现美团首页切换效果
 
 ### 美团效果图
-<img src="/screenshot/meituan.gif"/>
+<img src="/screenshot/meituan.gif" width="360" height="640"/>
 
 ### 我的效果图
-<img src="/screenshot/me.gif" style="zoom:70%;"/>
+<img src="/screenshot/me.gif" width="360" height="640"/>
 
 ### 使用
 
-#### 通过继承RVAdapter来实现ViewPager的Adapter，实现其两个方法:
-###### 1.实现getLayoutId，提供item的布局
-###### 2.实现onBindView，对itemView设置数据
-###### 例如
+#### 通过继承RVAdapter来实现PagerAdapter(用泛型来指定数据类型)，子类实现其两个方法:
+###### 1.getLayoutId，提供item的布局
+###### 2.onBindView，对itemView设置数据
+###### 例如：
 ```
 public class MyViewPagerAdapter extends RVAdapter<MenuItemEntity> {
     public MyViewPagerAdapter(Context mContext, List<MenuItemEntity> dataList, int pageSize, int spanCount) {
@@ -29,11 +29,14 @@ public class MyViewPagerAdapter extends RVAdapter<MenuItemEntity> {
         TextView tv = holder.getView(R.id.tv);
         tv.setText(data.getTitle());
         tv.setCompoundDrawablesWithIntrinsicBounds(0, data.getResId(), 0, 0);
-
     }
 }
  ```
 
+#### 设置ViewPager的Adapter
+```
+mViewPager.setAdapter(adapter);
+```
 #### 设置Item事件监听
 ```
 adapter.setOnItemClickListener(new RVAdapter.OnItemClickListener<MenuItemEntity>() {
