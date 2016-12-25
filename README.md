@@ -1,11 +1,10 @@
 # MeiTuanViewPagerLibrary
 快速实现美团首页切换效果
 
-### 美团效果图
-<img src="/screenshot/meituan.gif" width="360" height="640"/>
-
-### 我的效果图
-<img src="/screenshot/me.gif" width="360" height="640"/>
+| - | - |
+|---|---|
+| 美图效果图  | 我的效果图 |
+| <img src="/screenshot/meituan.gif" width="360" height="640"/>| <img src="/screenshot/me.gif" width="360" height="640"/>|
 
 ### 使用
 
