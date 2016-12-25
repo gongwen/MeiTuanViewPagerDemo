@@ -1,6 +1,5 @@
 # MeiTuanViewPagerLibrary
-通过MarqueeFactory来提供各种样式的跑马灯View，
-支持自定义跑马灯ItemView
+模仿美团首页切换效果
 
 ### 美团效果图
 <img src="/screenshot/meituan.gif"/>
