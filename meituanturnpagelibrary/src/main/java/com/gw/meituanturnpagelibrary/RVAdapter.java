@@ -24,6 +24,10 @@ public abstract class RVAdapter<TH> extends PagerAdapter {
     private int pageCount;
     private OnItemClickListener<TH> mOnItemClickListener;
 
+    /*
+    *params pageSize :每页item个数
+    *params spanCount :每行item个数
+    */
     public RVAdapter(Context mContext, List<TH> dataList, int pageSize, int spanCount) {
         this.mContext = mContext;
         this.dataList = dataList;

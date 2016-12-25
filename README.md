@@ -5,12 +5,12 @@
 <img src="/screenshot/meituan.gif"/>
 
 ### 我的效果图
-<img src="/screenshot/me.gif" style="width:30%;"/>
+<img src="/screenshot/me.gif" style="zoom:70%;"/>
 
 ### 使用
 
-#### 通过继承RVAdapter来实现ViewPager的Adapter，重写其两个方法:
-###### 1.实现getLayoutId 提供item的布局
+#### 通过继承RVAdapter来实现ViewPager的Adapter，实现其两个方法:
+###### 1.实现getLayoutId，提供item的布局
 ###### 2.实现onBindView，对itemView设置数据
 ###### 例如
 ```
